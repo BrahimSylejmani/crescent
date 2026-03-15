@@ -1,0 +1,344 @@
+/* X-Large devices (large desktops, less than 1496px)*/
+@media (max-width: 1496.98px) {
+  .start-reader {
+    left: -6rem;
+  }
+}
+
+/* X-Large devices (large desktops, less than 1440px)*/
+
+@media (max-width: 1440.98px) {
+  .start-reader {
+    display: none;
+  }
+
+  .pr-lg {
+    padding: 0.94rem 1rem;
+  }
+}
+
+/* Large devices (desktops, less than 1200px)*/
+@media (max-width: 1199.98px) {
+  .sass-menu a.nav-link {
+    padding: 0 0.6rem !important;
+    margin: 0 0.1rem;
+  }
+}
+
+/*  devices (large desktops, less than 1024) */
+@media (max-width: 1024.98px) {
+  /* banner css  start*/
+  .overview-img-3 {
+    top: 103px;
+    right: -41px;
+    width: 28%;
+  }
+
+  .overview-img-4 {
+    bottom: 9px;
+    width: 37%;
+    left: -72px;
+  }
+
+  /* banner css  end*/
+
+  /* Integration start */
+  
+  .discod{
+    width: 12%;
+  }
+
+  .mali {
+    width: 7%;
+  }
+
+  .youtub {
+    width: 7%;
+  }
+
+  .slag {
+    width: 8%;
+  }
+
+  .figma {
+    width: 7%;
+  }
+
+  .drive {
+    width: 9%;
+  }
+
+  .shopyfi {
+    width: 8%;
+  }
+
+
+  /* Integration end */
+}
+
+/* Medium devices (tablets, less than 992px)*/
+
+@media (max-width: 991.98px) {
+  /* collapse menu css  start*/
+
+  .navbar-collapse ul li {
+    margin: 5px 0;
+  }
+  .navbar-collapse {
+    text-align: center;
+    background: aliceblue;
+    margin-top: 10px;
+  }
+
+  /* dropdown menu*/
+
+  .sass-menu ul.dropdown-menu {
+    margin-top: 13px !important;
+    text-align: center;
+  }
+
+  /* collapse menu css  end*/
+
+  /* Objectives css start */
+  .reader-right {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  /* Objectives css end */
+
+  /* analytics css start */
+
+  .analytics-chat-img {
+    text-align: center;
+  }
+
+  /* analytics css end */
+
+   /* Integration start */
+
+
+   .discod{
+    width: 12%;
+  }
+
+  .mali {
+    top: 56%;
+  }
+
+  .youtub {
+    right: 31%;
+    bottom: 17%;
+  }
+
+  .slag {
+    top: 51%;
+    right: 15%;
+
+  }
+
+  .figma {
+    top: 56%;
+    left: 34%;
+  }
+
+  .drive {
+    left: 18%;
+    top: 48%;
+  }
+
+  .shopyfi {
+    bottom: 17%;
+    left: 29%;
+  }
+
+
+   /* Integration end */
+
+    /* home page 2 start */
+
+    .advancement-img-sass-1, .advancement-img-sass-2{
+      display: none;
+    }
+  
+    /* home page 2 end */
+
+}
+
+/* Small devices (landscape phones, less than 768px)*/
+@media (max-width: 767.98px) {
+
+  /* section-title start */
+  .section-title {
+    font-size: 2.3rem;
+  }
+
+/* section-title end */
+
+  /* banner css start*/
+
+
+
+  .overview-img-3 {
+    display: none;
+  }
+
+  .overview-img-4 {
+    display: none;
+  }
+
+  .sass-banner-title.white-text {
+    font-size: 3.375rem;
+    line-height: 4rem;
+  }
+  /* banner css  end*/
+
+  /* price css start */
+
+  .single-price-table.active {
+    margin-top:2rem ;
+}
+  /* price css end */
+
+   /* Integration start */
+
+
+   .discod{
+    top: 79%;
+    left: 44%;
+
+  }
+
+  .mali {
+    top: 81%;
+    width: 10%;
+    right: 25%;
+  }
+
+  .youtub {
+    right: 38%;
+    bottom: 4%;
+    width: 11%;
+  }
+
+  .slag {
+    top: 72%;
+    right: 21%;
+
+  }
+
+  .figma {
+    top: 74%;
+    left: 19%;
+  }
+
+  .drive {
+    left: 39%;
+    top: 70%;
+  }
+
+  .shopyfi {
+    bottom: 9%;
+    width: 11%;
+    left:19%
+  }
+
+
+   /* Integration end */
+
+  /* home page 2 start */
+
+  /* banner start */
+
+  .sass-to-banner-title {
+    font-size: 2.375rem;
+    line-height: normal;
+}
+
+  .sass-to-banner-img-2{
+    margin-top: 0;
+  }
+
+  .lg-mt-0{
+    margin-top: 0;
+  }
+
+  .project-area{
+    padding-top: 53px;
+  }
+
+  /* banner end */
+
+  /* brand start */
+
+  .trusted-top:before{
+    content: none;
+  }
+  .trusted-top:after{
+    content: none;
+  }
+
+  /* brand end */
+
+  /* integration area start */
+
+  .w-1011{
+    gap: 8px;
+  }
+
+  .col-in-3{
+    gap: 8px;
+  }
+
+  /* integration area end */
+
+  /* feed back start */
+
+  .angeles:after{
+    content: none;
+  }
+
+  /* feed back end */
+
+  /* free start */
+
+  .free-context {
+    padding: 25px;
+    text-align: center;
+}
+
+  /* free end */
+
+  /* home page 2 end */
+
+  /* contact page css start */
+
+  .contact-area {
+    padding: 5.75rem 0 2rem;
+}
+
+  .contact-from {
+    padding: 2.25rem;
+  }
+
+  /* contact page css end */
+
+  /* single blog page */
+
+  .some-code-name:before{
+    content: none;
+  }
+
+  .some-code-name:after{
+    content: none;
+  }
+
+  .single-comment-box-bg {
+    flex-direction: column;
+  }
+
+  .user-info-athor {
+    flex-direction: column;
+  }
+
+}

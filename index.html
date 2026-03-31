@@ -1,1822 +1,857 @@
 <!DOCTYPE html>
-<html class="no-js" lang="ZXX">
-
+<html lang="en">
 <head>
-  <!-- Meta Tags -->
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="keywords" content="Site keywords here" />
-  <meta name="description" content="#" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-  <!-- Site Title -->
-  <title>CRESCENT - Premium Web, Mobile & Digital Marketing Services</title>
-
-  <!-- Fav Icon -->
-
-
-  <!-- Plugins CSS -->
+  <title>CRESCENT — Premium Digital Agency | Web, Mobile & SaaS</title>
+  <meta name="description" content="CRESCENT is a full-service digital agency crafting premium websites, mobile apps, SaaS platforms, and digital growth strategies." />
   <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/animate.min.css" />
-  <link rel="stylesheet" href="css/aos.min.css" />
   <link rel="stylesheet" href="css/font-awesome-all.min.css" />
-  <link rel="stylesheet" href="css/slick-bundle.min.css" />
-  <link rel="stylesheet" href="css/video-popup.min.css" />
-
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="css/theme-default.css" />
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@300;400;600&display=swap"
-    rel="stylesheet">
+  <link rel="stylesheet" href="css/aos.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --crescent-neon: #794AFF;
-      /* V5 Purple */
-      --crescent-bg-dark: #0A0118;
-      /* V5 Deep Navy/Black */
-      --crescent-accent-blue: #1904E5;
-      /* V5 AI Blue */
-      --crescent-glass: rgba(255, 255, 255, 0.04);
-      --crescent-glass-border: rgba(255, 255, 255, 0.1);
-      --crescent-v5-gradient: linear-gradient(94.31deg, #794AFF 5.85%, #1904E5 95.44%);
+      --c-blue: #0533ff;
+      --c-dark: #0f1225;
+      --c-light: #f0f1f8;
+      --c-grid: rgba(180, 185, 210, 0.25);
+      --c-white: #ffffff;
+      --c-text: #2a2d3e;
+      --c-muted: #6b7094;
+      --c-pastel-purple: #e8e0ff;
+      --c-pastel-green: #d4f5e9;
+      --c-pastel-blue: #dbeafe;
+      --c-pastel-pink: #ffe4e8;
+      --c-pastel-orange: #fff0db;
+      --c-pastel-teal: #ccfbf1;
+      --c-purple-text: #7c5cfc;
+      --c-green-text: #22c55e;
+      --c-blue-text: #3b82f6;
+      --c-pink-text: #f43f5e;
+      --c-orange-text: #f59e0b;
+      --c-teal-text: #14b8a6;
+      --radius-card: 20px;
+      --radius-btn: 12px;
     }
-
+    *, *::before, *::after { box-sizing: border-box; }
     body {
-      background-color: var(--crescent-bg-dark) !important;
-      color: #fff;
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Inter', sans-serif;
+      color: var(--c-text);
+      background: var(--c-light);
+      margin: 0;
+      overflow-x: hidden;
     }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    .h7-section-heading-main,
-    .h7-hero-main-heading {
-      font-family: 'Outfit', sans-serif !important;
-      text-transform: uppercase;
-      letter-spacing: -0.01em;
+    .container { position: relative; z-index: 2; }
+    h1,h2,h3,h4,h5,h6 {
+      font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--c-dark);
     }
-
-    .bg-dark {
-      background-color: var(--crescent-bg-dark) !important;
-    }
-
-    /* Header & Navigation Fixes */
-    .crescent-header__menu ul li a,
-    .crescent-header__nav-menu ul li a,
-    .h7-btn-primary span,
-    .h7-btn-secondary span,
-    .crescent-btn span {
-      font-family: 'Syne', sans-serif !important;
-      font-weight: 700 !important;
-      text-transform: uppercase;
-    }
-
-    .h7-btn-primary,
-    .crescent-btn.primary-bg {
-      background: var(--crescent-v5-gradient) !important;
-      border: none !important;
-      color: #fff !important;
-      box-shadow: 0 10px 20px rgba(121, 74, 255, 0.3) !important;
-      transition: all 0.3s ease !important;
-    }
-
-    .h7-btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 30px rgba(121, 74, 255, 0.5) !important;
-    }
-
-    .crescent-header__nav-menu ul li a:hover,
-    .crescent-header__nav-menu ul li.active a {
-      color: var(--crescent-neon) !important;
-    }
-
-    /* Logo Styling */
-    .crescent-logo-text {
-      font-family: 'Syne', sans-serif !important;
-      font-size: 28px;
-      font-weight: 800;
-      background: var(--crescent-v5-gradient);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      letter-spacing: -1px;
-    }
-
-    /* Service Icon Glow */
-    .h7-card-icon svg {
-      filter: drop-shadow(0 0 8px rgba(121, 74, 255, 0.6));
-    }
-
-    .h7-card-icon circle,
-    .h7-card-icon rect,
-    .h7-card-icon path {
-      stroke: var(--crescent-neon) !important;
-    }
-
-    .h7-btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.1) !important;
-      border-color: var(--crescent-neon) !important;
-    }
-
-    .crescent-glass-card {
-      background: var(--crescent-glass);
-      backdrop-filter: blur(10px);
-      border: 1px solid var(--crescent-glass-border);
-      border-radius: 24px;
-      padding: 40px 30px;
-      height: 100%;
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Unique Dot Pattern + Gradient Mesh Background */
+    .grid-bg {
       position: relative;
-      overflow: hidden;
+      background-color: var(--c-light);
+      background-image:
+        radial-gradient(circle, rgba(5,51,255,0.04) 1px, transparent 1px),
+        radial-gradient(ellipse at 20% 50%, rgba(124,92,252,0.06) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(59,130,246,0.05) 0%, transparent 50%),
+        radial-gradient(ellipse at 60% 80%, rgba(20,184,166,0.04) 0%, transparent 50%);
+      background-size: 24px 24px, 100% 100%, 100% 100%, 100% 100%;
     }
 
-    .crescent-glass-card:hover {
-      background: rgba(255, 255, 255, 0.06);
-      border-color: var(--crescent-neon);
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(121, 74, 255, 0.15);
+    .dark-section {
+      background-color: var(--c-dark) !important;
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px),
+        radial-gradient(ellipse at 30% 40%, rgba(5,51,255,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 70%, rgba(124,92,252,0.06) 0%, transparent 50%);
+      background-size: 24px 24px, 100% 100%, 100% 100%;
+      color: #fff;
     }
+    .dark-section h1,.dark-section h2,.dark-section h3,.dark-section h4,.dark-section h5,.dark-section h6 { color: #fff; }
+    .dark-section p, .dark-section a { color: rgba(255,255,255,0.7); }
 
-    .icon-glow {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 64px;
-      height: 64px;
-      background: rgba(121, 74, 255, 0.15);
-      border-radius: 16px;
-      margin-bottom: 25px;
-      position: relative;
-    }
-
-    .icon-glow::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: var(--crescent-neon);
-      filter: blur(20px);
-      opacity: 0.3;
-      border-radius: 50%;
-    }
-
-    .mesh-gradient-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background:
-        radial-gradient(at 0% 0%, rgba(121, 74, 255, 0.08) 0px, transparent 50%),
-        radial-gradient(at 100% 100%, rgba(25, 4, 229, 0.08) 0px, transparent 50%);
-    }
-
-    .h7-section-heading-main,
-    .section-title-v3__title {
-      font-size: 38px;
-      font-weight: 800;
-      letter-spacing: -0.01em;
-      color: #fff !important;
-    }
-
-    .text-h7-primary,
-    .sec-sm-title {
-      color: var(--crescent-neon) !important;
-    }
-
-    /* Target specific template sections to enforce V5 dark theme */
-    section,
-    .h7-pricing-area,
-    .h7-testimonial-area,
-    .h7-blog-area,
-    footer,
-    .crescent-header,
-    .preloader,
-    .footer-copyright,
-    .single-price-table,
-    .single-blog-card,
-    .testimonial-v3__single,
-    .h7-app-sec,
-    .h7-app-interface {
-      background-color: var(--crescent-bg-dark) !important;
-      background-image: none !important;
-      color: #fff !important;
-      position: relative;
-    }
-
-    /* V5 Purple/Blue Atmosperic Glows */
-    section::before,
-    footer::before {
-      content: '';
-      position: absolute;
-      top: -10%;
-      left: -10%;
-      width: 50%;
-      height: 50%;
-      background: radial-gradient(circle, rgba(121, 74, 255, 0.05) 0%, transparent 70%);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    section::after {
-      content: '';
-      position: absolute;
-      bottom: -10%;
-      right: -10%;
-      width: 50%;
-      height: 50%;
-      background: radial-gradient(circle, rgba(25, 4, 229, 0.05) 0%, transparent 70%);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .single-price-table,
-    .single-blog-card,
-    .testimonial-v3__single {
-      border: 1px solid var(--crescent-glass-border) !important;
-      background: rgba(255, 255, 255, 0.02) !important;
-      transition: all 0.4s ease;
-    }
-
-    .single-price-table:hover,
-    .single-blog-card:hover {
-      border-color: var(--crescent-neon) !important;
-      box-shadow: 0 0 30px rgba(121, 74, 255, 0.15) !important;
-    }
-
-    /* Scalability Engine Styles */
-    .scalability-engine-card {
-      background: rgba(255, 255, 255, 0.03);
+    /* Navigation */
+    .c-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 16px 0;
+      background: rgba(240,241,248,0.85);
       backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 32px;
-      padding: 40px;
-      width: 100%;
-      max-width: 500px;
-      position: relative;
-      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
-    }
-
-    .scalability-engine-card::before {
-      content: '';
-      position: absolute;
-      inset: -1px;
-      border-radius: 32px;
-      padding: 1px;
-      background: linear-gradient(45deg, var(--crescent-neon), transparent, var(--crescent-v5-purple));
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      mask-composite: exclude;
-      pointer-events: none;
-    }
-
-    .engine-header {
-      margin-bottom: 30px;
-    }
-
-    .engine-label {
-      font-family: 'Syne', sans-serif;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: var(--crescent-neon);
-      margin-bottom: 8px;
-    }
-
-    .engine-title {
-      font-family: 'Outfit', sans-serif;
-      font-size: 24px;
-      font-weight: 700;
-      color: #fff;
-    }
-
-    .slider-container {
-      margin: 40px 0;
-      position: relative;
-    }
-
-    .custom-range {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 100%;
-      height: 4px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 2px;
-      outline: none;
-    }
-
-    .custom-range::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      width: 24px;
-      height: 24px;
-      background: #fff;
-      border: 4px solid var(--crescent-neon);
-      border-radius: 50%;
-      cursor: pointer;
-      box-shadow: 0 0 20px var(--crescent-neon);
-      transition: 0.3s;
-    }
-
-    .custom-range::-webkit-slider-thumb:hover {
-      transform: scale(1.2);
-    }
-
-    .metrics-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      margin-top: 30px;
-    }
-
-    .metric-box {
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      padding: 15px;
-      border-radius: 16px;
-    }
-
-    .metric-value {
-      font-size: 20px;
-      font-weight: 800;
-      color: #fff;
-      font-family: 'Syne', sans-serif;
-    }
-
-    .metric-label {
-      font-size: 11px;
-      color: rgba(255, 255, 255, 0.7);
-      text-transform: uppercase;
-      margin-top: 5px;
-      font-weight: 500;
-    }
-
-    .revenue-projection-box {
-      margin-top: 30px;
-      padding: 20px;
-      background: rgba(121, 74, 255, 0.1);
-      border: 1px solid rgba(121, 74, 255, 0.2);
-      border-radius: 16px;
-      text-align: center;
-    }
-
-    .revenue-label {
-      font-size: 12px;
-      color: var(--crescent-v5-purple);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: 600;
-      margin-bottom: 5px;
-    }
-
-    .revenue-value {
-      font-size: 22px;
-      font-weight: 800;
-      color: #fff;
-      font-family: 'Syne', sans-serif;
-      text-transform: uppercase;
-    }
-
-    .engine-cta {
-      margin-top: 40px;
-      width: 100%;
-      background: var(--crescent-v5-gradient);
-      border: none;
-      padding: 18px;
-      border-radius: 16px;
-      color: #fff;
-      font-weight: 700;
-      font-family: 'Syne', sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      transition: all 0.3s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    .engine-cta:hover {
-      transform: scale(1.02);
-      box-shadow: 0 10px 30px rgba(121, 74, 255, 0.4);
-    }
-
-    /* Strategic Advantage Section Styles */
-    .advantage-card {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 24px;
-      padding: 40px;
-      height: 100%;
+      border-bottom: 1px solid var(--c-grid);
       transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
+    }
+    .c-nav .container { display: flex; align-items: center; justify-content: space-between; }
+    .c-nav-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700; font-size: 24px;
+      color: var(--c-blue); text-decoration: none;
+      text-transform: uppercase; letter-spacing: 1px;
+    }
+    .c-nav-links { display: flex; align-items: center; gap: 8px; list-style: none; margin: 0; padding: 0; }
+    .c-nav-links a {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600; font-size: 14px;
+      color: var(--c-text); text-decoration: none;
+      text-transform: uppercase; letter-spacing: 0.5px;
+      padding: 8px 14px; border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+    .c-nav-links a:hover { color: var(--c-blue); background: rgba(5,51,255,0.06); }
+    .c-nav-cta {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600; font-size: 14px;
+      color: #fff !important; text-decoration: none;
+      background: var(--c-blue); padding: 10px 24px;
+      border-radius: 100px; text-transform: uppercase;
+      letter-spacing: 1px; transition: all 0.3s ease;
+    }
+    .c-nav-cta:hover { background: #0428cc; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(5,51,255,0.3); color: #fff !important; }
+
+    /* Mobile Nav Toggle */
+    .c-nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .c-nav-toggle span { display: block; width: 24px; height: 2px; background: var(--c-dark); margin: 5px 0; transition: 0.3s; }
+
+    /* Hero */
+    .c-hero {
+      min-height: 100vh; display: flex; align-items: center;
+      padding: 140px 0 100px; position: relative; overflow: hidden;
+    }
+    .c-hero-content { text-align: center; max-width: 900px; margin: 0 auto; position: relative; z-index: 2; }
+    .c-hero h1 {
+      font-size: clamp(48px, 8vw, 96px);
+      line-height: 1.05; margin-bottom: 40px;
+      color: var(--c-dark);
+    }
+    .c-hero h1 .highlight { color: var(--c-blue); }
+    .c-hero-sub {
+      font-size: 18px; color: var(--c-muted);
+      max-width: 560px; margin: 0 auto 50px;
+      line-height: 1.7;
+    }
+    .c-hero-cta {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--c-blue); color: #fff; padding: 16px 40px;
+      border-radius: 100px; font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600; font-size: 15px; text-transform: uppercase;
+      letter-spacing: 1px; text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .c-hero-cta:hover { background: #0428cc; transform: translateY(-3px); box-shadow: 0 12px 32px rgba(5,51,255,0.35); color: #fff; }
+    /* Particle canvas background — full page */
+    .particle-canvas {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      z-index: 1; pointer-events: none;
     }
 
-    .advantage-card:hover {
-      background: rgba(255, 255, 255, 0.05);
-      border-color: var(--crescent-v5-purple);
-      transform: translateY(-5px);
+
+    /* Section Styles */
+    .c-section { padding: 100px 0; position: relative; }
+    .c-section-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 3px;
+      color: var(--c-blue); margin-bottom: 16px;
+    }
+    .c-section-title {
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.15; margin-bottom: 20px;
+    }
+    .c-section-desc {
+      font-size: 17px; color: var(--c-muted);
+      max-width: 600px; line-height: 1.7;
+    }
+    .c-section-desc.centered { margin: 0 auto; }
+
+    /* Why Us Cards */
+    .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 60px; }
+    .why-card {
+      background: var(--c-white); border-radius: var(--radius-card);
+      padding: 36px 28px; border: 1px solid rgba(0,0,0,0.06);
+      transition: all 0.3s ease;
+    }
+    .why-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+    .why-card h4 { font-size: 18px; margin-bottom: 12px; }
+    .why-card p { font-size: 15px; color: var(--c-muted); line-height: 1.6; margin: 0; }
+    .why-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px; font-size: 24px;
     }
 
-    .advantage-icon-box {
-      width: 60px;
-      height: 60px;
-      background: rgba(121, 74, 255, 0.1);
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 25px;
-      color: var(--crescent-v5-purple);
+    /* Service Cards */
+    .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 60px; }
+    .svc-card {
+      background: var(--c-white); border-radius: var(--radius-card);
+      padding: 40px 32px; border: 1px solid rgba(0,0,0,0.06);
+      transition: all 0.3s ease; cursor: default;
+    }
+    .svc-card:hover { transform: translateY(-8px); box-shadow: 0 24px 48px rgba(0,0,0,0.1); }
+    .svc-icon {
+      width: 64px; height: 64px; border-radius: 18px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 24px;
+    }
+    .svc-icon svg { width: 28px; height: 28px; }
+    .svc-card h3 { font-size: 20px; margin-bottom: 0; }
+
+    /* Unified blue for all service icons */
+    .svc-card .svc-icon { background: var(--c-pastel-blue); }
+    .svc-card .svc-icon svg { stroke: var(--c-blue); }
+    .svc-card h3 { color: var(--c-blue); }
+
+    .svc-cta-row { text-align: center; margin-top: 48px; }
+    .c-btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--c-blue); color: #fff; padding: 14px 36px;
+      border-radius: 100px; font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600; font-size: 14px; text-transform: uppercase;
+      letter-spacing: 1px; text-decoration: none; transition: all 0.3s ease;
+    }
+    .c-btn-primary:hover { background: #0428cc; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(5,51,255,0.3); color: #fff; }
+
+    /* Process / Methodology */
+    .process-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 48px; justify-content: center; }
+    .process-tab {
+      font-family: 'Space Grotesk', sans-serif; font-weight: 600;
+      font-size: 14px; text-transform: uppercase;
+      padding: 10px 24px; border-radius: 100px;
+      border: 2px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.6); background: none;
+      cursor: pointer; transition: all 0.3s ease; letter-spacing: 0.5px;
+    }
+    .process-tab.active, .process-tab:hover {
+      border-color: var(--c-blue); color: #fff;
+      background: var(--c-blue);
+    }
+    .process-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .process-step { text-align: center; }
+    .step-num {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: transparent; border: 2px solid var(--c-blue);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px; font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700; font-size: 18px; color: #fff;
+      box-shadow: 0 0 20px rgba(5,51,255,0.3);
+    }
+    .process-step h4 { font-size: 18px; margin-bottom: 10px; }
+    .process-step p { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.6; max-width: 300px; margin: 0 auto; }
+    .process-line {
+      position: absolute; top: 28px; left: 20%; width: 60%;
+      height: 2px; background: linear-gradient(90deg, transparent, rgba(5,51,255,0.4), transparent);
     }
 
-    .leverage-stat {
-      font-size: 32px;
-      font-weight: 800;
-      color: #fff;
-      margin: 15px 0;
-      font-family: 'Syne', sans-serif;
+    /* Stats */
+    .stats-row {
+      display: flex; justify-content: center; gap: 80px;
+      padding: 60px 0; text-align: center;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      margin: 0;
     }
+    .stat-item h3 { font-size: 42px; color: var(--c-blue); margin-bottom: 4px; }
+    .stat-item p { font-size: 14px; color: var(--c-muted); text-transform: uppercase; letter-spacing: 1px; margin: 0; }
 
-    .leverage-benchmark {
-      font-size: 13px;
-      color: rgba(255, 255, 255, 0.5);
-      text-transform: uppercase;
+    /* Pricing */
+    .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 60px; }
+    .price-card {
+      background: var(--c-white); border-radius: var(--radius-card);
+      padding: 40px 32px; border: 1px solid rgba(0,0,0,0.06);
+      transition: all 0.3s ease; position: relative;
+    }
+    .price-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+    .price-card.featured {
+      border-color: var(--c-blue);
+      box-shadow: 0 8px 32px rgba(5,51,255,0.12);
+    }
+    .price-badge {
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--c-blue); color: #fff; padding: 4px 20px;
+      border-radius: 100px; font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px; font-weight: 600; text-transform: uppercase;
       letter-spacing: 1px;
     }
-
-    .divider-glow {
-      height: 2px;
-      width: 100%;
-      background: linear-gradient(90deg, transparent, var(--crescent-v5-purple), transparent);
-      margin: 40px 0;
-      opacity: 0.3;
+    .price-card h3 { font-size: 22px; margin-bottom: 8px; }
+    .price-card .price-desc { font-size: 14px; color: var(--c-muted); margin-bottom: 20px; }
+    .price-amount { font-size: 36px; font-weight: 700; margin-bottom: 4px; }
+    .price-term { font-size: 13px; color: var(--c-muted); margin-bottom: 28px; }
+    .price-features { list-style: none; padding: 0; margin: 0 0 32px; }
+    .price-features li {
+      display: flex; align-items: center; gap: 10px;
+      padding: 8px 0; font-size: 14px; color: var(--c-text);
+      border-bottom: 1px solid rgba(0,0,0,0.04);
     }
-
-    /* Fix Text Visibility */
-    .text-light-gray,
-    .h7-card-paragraph,
-    .single-price-table__text,
-    .single-blog-card__text,
-    .download-app-paragraph,
-    .text-h7-paragraph,
-    .single-feedback__author-postion,
-    .footer-menu__list li a,
-    .footer-copyright__text p,
-    .footer-contact-list li a,
-    .single-price-table__features span,
-    .duration,
-    .h7-nav-tabs .h7-btn-secondary:not(.active),
-    .counter-content span,
-    .single-funfact__content p {
-      color: #b0b0b0 !important;
+    .price-features li svg { flex-shrink: 0; color: var(--c-blue); }
+    .price-btn {
+      display: block; text-align: center; padding: 14px;
+      border-radius: 100px; font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600; font-size: 14px; text-transform: uppercase;
+      letter-spacing: 1px; text-decoration: none; transition: all 0.3s ease;
+      border: 2px solid var(--c-blue); color: var(--c-blue); background: none;
     }
+    .price-btn:hover { background: var(--c-blue); color: #fff; }
+    .price-card.featured .price-btn { background: var(--c-blue); color: #fff; border-color: var(--c-blue); }
+    .price-card.featured .price-btn:hover { background: #0428cc; }
 
-    /* Headings to white */
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    .h7-section-heading-main,
-    .h7-card-heading,
-    .h7-hero-main-heading,
-    .single-price-table__title,
-    .footer-title,
-    .text-h7-heading,
-    .price-amount,
-    .single-feedback__author-name,
-    .counter-content h2,
-    .single-funfact__content h3 {
-      color: #ffffff !important;
+    /* Footer */
+    .c-footer { padding: 80px 0 0; }
+    .c-footer h4 { font-size: 14px; margin-bottom: 20px; color: #fff; text-transform: uppercase; letter-spacing: 2px; }
+    .c-footer ul { list-style: none; padding: 0; margin: 0; }
+    .c-footer ul li { margin-bottom: 10px; }
+    .c-footer ul li a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+    .c-footer ul li a:hover { color: var(--c-blue); }
+    .c-footer-bottom {
+      margin-top: 60px; padding: 24px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex; justify-content: space-between; align-items: center;
     }
-
-    .single-price-table.active {
-      background: rgba(121, 74, 255, 0.08) !important;
-      border-color: var(--crescent-neon) !important;
-      box-shadow: 0 0 50px rgba(121, 74, 255, 0.2) !important;
+    .c-footer-bottom p { margin: 0; font-size: 13px; color: rgba(255,255,255,0.4); }
+    .c-footer-bottom a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 13px; margin-left: 24px; }
+    .c-footer-bottom a:hover { color: var(--c-blue); }
+    .footer-social { display: flex; gap: 12px; }
+    .footer-social a {
+      width: 40px; height: 40px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.1);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.5); transition: all 0.3s;
     }
+    .footer-social a:hover { border-color: var(--c-blue); color: var(--c-blue); background: rgba(5,51,255,0.1); }
 
-    /* Corner Glows for Containers */
-    .crescent-glass-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 20px;
-      height: 20px;
-      border-top: 2px solid var(--crescent-neon);
-      border-left: 2px solid var(--crescent-neon);
-      opacity: 0;
-      transition: 0.3s;
+    /* CTA Section */
+    .cta-section { text-align: center; padding: 100px 0; }
+    .cta-section h2 { font-size: clamp(36px, 5vw, 64px); margin-bottom: 32px; }
+    .dark-section .cta-section h2 { color: #fff; }
+
+    /* Responsive */
+    @media (max-width: 991px) {
+      .c-nav-links { display: none; }
+      .c-nav-toggle { display: block; }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .svc-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-steps { grid-template-columns: 1fr; gap: 40px; }
+      .process-line { display: none; }
+      .price-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
+      .stats-row { flex-wrap: wrap; gap: 40px; }
     }
-
-    .crescent-glass-card:hover::before {
-      opacity: 1;
-    }
-
-    .sub-menu {
-      background-color: var(--crescent-bg-dark) !important;
-      border: 1px solid var(--crescent-glass-border) !important;
-    }
-
-    .sub-menu li a {
-      color: #fff !important;
-    }
-
-    .sub-menu li a:hover {
-      color: var(--crescent-neon) !important;
-      background: rgba(121, 74, 255, 0.1) !important;
-    }
-
-    /* Image Glows */
-    .h7-methodology-img img,
-    .h7-hero-img img {
-      filter: drop-shadow(0 0 25px rgba(121, 74, 255, 0.3));
-    }
-
-    /* Radical Animations */
-    @keyframes float {
-      0% {
-        transform: translateY(0px) rotate(0deg);
-      }
-
-      50% {
-        transform: translateY(-20px) rotate(2deg);
-      }
-
-      100% {
-        transform: translateY(0px) rotate(0deg);
-      }
-    }
-
-    .hero-ultra-img {
-      animation: float 6s ease-in-out infinite;
-      filter: drop-shadow(0 0 50px rgba(121, 74, 255, 0.4));
-      border-radius: 40px;
-    }
-
-    .gradient-text-ai {
-      background: var(--crescent-v5-gradient);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: 800;
-      display: inline-block;
-    }
-
-    .hero-badge-glass {
-      background: rgba(121, 74, 255, 0.1);
-      border: 1px solid var(--crescent-glass-border);
-      padding: 8px 16px;
-      border-radius: 100px;
-      font-size: 14px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      display: inline-block;
-      margin-bottom: 30px;
-      backdrop-filter: blur(5px);
-      font-weight: 600;
-    }
-
-    @keyframes shine {
-      0% {
-        opacity: 0.5;
-      }
-
-      50% {
-        opacity: 1;
-      }
-
-      100% {
-        opacity: 0.5;
-      }
-    }
-
-    .text-h7-primary {
-      animation: shine 3s ease-in-out infinite;
-    }
-
-    /* Restored styles */
-    .funfact-v2__number rect {
-      fill: var(--crescent-neon) !important;
-    }
-
-    input[type="range"] {
-      accent-color: var(--crescent-neon) !important;
-    }
-
-    input[type="range"]::-webkit-slider-runnable-track {
-      background: rgba(255, 255, 255, 0.1) !important;
-    }
-
-    input[type="range"]::-webkit-slider-thumb {
-      background: var(--crescent-neon) !important;
-    }
-
-    .slick-dots li.slick-active button {
-      background: var(--crescent-neon) !important;
-    }
-
-    .slick-dots li:before {
-      border-color: var(--crescent-neon) !important;
-    }
-
-    .pricing-button,
-    .h6-btn-bg,
-    .blog-tag a,
-    .read-more-btn {
-      background: var(--crescent-v5-gradient) !important;
-      color: #fff !important;
-    }
-
-    .read-more-btn svg path {
-      stroke: #fff !important;
-    }
-
-    .h7-blog-readmore span {
-      color: #fff !important;
-    }
-
-    /* Standardized Padding Utilities */
-    .pt-180 {
-      padding-top: 40px !important;
-    }
-
-    .pb-180 {
-      padding-bottom: 40px !important;
-    }
-
-    .pt-250 {
-      padding-top: 40px !important;
-    }
-
-    .pb-250 {
-      padding-bottom: 40px !important;
-    }
-
-    .pt-90 {
-      padding-top: 40px !important;
-    }
-
-    .pb-90 {
-      padding-bottom: 40px !important;
-    }
-
-    .pt-0 {
-      padding-top: 0px !important;
-    }
-
-    .pb-0 {
-      padding-bottom: 0px !important;
-    }
-
-    .h7-funfact .funfact-v2__content span {
-      color: var(--crescent-neon) !important;
-    }
-
-    .h7-funfact .funfact-v2__label {
-      color: rgba(255, 255, 255, 0.7) !important;
+    @media (max-width: 575px) {
+      .why-grid, .svc-grid { grid-template-columns: 1fr; }
+      .c-hero h1 { font-size: 40px; }
+      .stats-row { gap: 30px; }
+      .c-footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
     }
   </style>
 </head>
+<body>
 
-<body class="home-6">
-  <!-- Preloader -->
-  <div class="preloader">
-    <div class="preloader-inner">
-      <div class="preloader-icon">
-        <span></span>
-        <span></span>
+<!-- Navigation -->
+<nav class="c-nav" id="c-nav">
+  <div class="container">
+    <a href="#" class="c-nav-logo">Crescent</a>
+    <ul class="c-nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+    </ul>
+    <a href="#contact" class="c-nav-cta">Let's Talk</a>
+    <button class="c-nav-toggle" onclick="document.querySelector('.c-nav-links').classList.toggle('show')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Particle canvas — full page, behind everything -->
+<canvas class="particle-canvas" id="heroParticles"></canvas>
+
+<!-- Hero heading transition styles -->
+<style>
+  .hero-text-wrapper {
+    position: relative; overflow: hidden; display: inline-block;
+  }
+  .hero-text-line {
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+                opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+                filter 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .hero-text-line.exit-up {
+    transform: translateY(-100%); opacity: 0; filter: blur(8px);
+  }
+  .hero-text-line.enter-below {
+    transform: translateY(100%); opacity: 0; filter: blur(8px);
+  }
+  .hero-text-line.visible {
+    transform: translateY(0); opacity: 1; filter: blur(0);
+  }
+</style>
+
+<!-- Hero -->
+<section class="c-hero grid-bg">
+
+  <div class="container">
+    <div class="c-hero-content" data-aos="fade-up">
+      <h1 id="hero-heading">
+        <span class="hero-text-wrapper">
+          <span class="hero-text-line visible" id="heroLine">Next-Gen <span class="highlight">Digital Presence</span></span>
+        </span>
+      </h1>
+      <p class="c-hero-sub">We architect high-performance SaaS platforms and premium web ecosystems. Empower your business with scalable, secure, and hyper-efficient digital leverage.</p>
+      <a href="#contact" class="c-hero-cta">Request Strategic Audit →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Why Us -->
+<section id="about" class="c-section grid-bg">
+  <div class="container">
+    <div class="text-center" data-aos="fade-up">
+      <div class="c-section-label">— About Us</div>
+      <h2 class="c-section-title">The CRESCENT Identity</h2>
+      <p class="c-section-desc centered">CRESCENT is a premier software agency specializing in high-performance digital ecosystems. We don't just build websites; we engineer revenue-generating platforms that eliminate friction and maximize market authority.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="why-icon" style="background:var(--c-pastel-blue);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--c-blue)" stroke-width="2"><path d="M12 2L2 7L12 12L22 7L12 2Z"/><path d="M2 17L12 22L22 17"/><path d="M2 12L12 17L22 12"/></svg>
+        </div>
+        <h4>Cloud Architecture</h4>
+        <p>Serverless infrastructure designed for infinite global scale and zero-latency performance.</p>
+      </div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="why-icon" style="background:var(--c-pastel-blue);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--c-blue)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h4>Human-AI Fusion</h4>
+        <p>Strategically embedding AI logic into core UX to automate decisions and optimize user journeys.</p>
+      </div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="why-icon" style="background:var(--c-pastel-blue);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--c-blue)" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h4>Precision Growth</h4>
+        <p>Technical execution that serves strategic business goals through systemic revenue loops.</p>
+      </div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="why-icon" style="background:var(--c-pastel-blue);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--c-blue)" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h4>Security Audits</h4>
+        <p>Enterprise-grade security protocols ensuring absolute integrity for your critical user data.</p>
       </div>
     </div>
   </div>
-  <!-- End Preloader -->
+</section>
 
-  <!-- Mobile Menu Modal -->
-  <div class="modal offcanvas-modal inflanar-mobile-menu fade bg-white" id="offcanvas-modal">
-    <div class="modal-dialog offcanvas-dialog">
-      <div class="modal-content">
-        <div class="modal-header offcanvas-header">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-            <i class="fas fa-remove"></i>
-          </button>
-        </div>
-        <!-- offcanvas-logo-start -->
-        <div class="offcanvas-logo">
-          <a href="#" class="crescent-logo-text" style="font-size: 24px;">CRESCENT</a>
-        </div>
-        <!-- offcanvas-logo-end -->
-        <!-- offcanvas-menu start -->
-        <nav id="offcanvas-menu" class="offcanvas-menu">
-          <!-- Main Menu -->
-          <ul class="nav-menu menu navigation list-none">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-          <!-- End Main Menu -->
-        </nav>
-        <!-- offcanvas-menu end -->
+<!-- Stats -->
+<section class="grid-bg">
+  <div class="container">
+    <div class="stats-row" data-aos="fade-up">
+      <div class="stat-item">
+        <h3>25+</h3>
+        <p>Projects Delivered</p>
+      </div>
+      <div class="stat-item">
+        <h3>5+</h3>
+        <p>Years Experience</p>
+      </div>
+      <div class="stat-item">
+        <h3>5+</h3>
+        <p>Global Partners</p>
+      </div>
+      <div class="stat-item">
+        <h3>99.9%</h3>
+        <p>Uptime Guarantee</p>
       </div>
     </div>
   </div>
-  <!-- End Mobile Menu Modal -->
+</section>
 
-  <!-- Header -->
-  <header id="active-sticky" class="crescent-header crescent-h7_header crescent-header--v3">
-    <div class="crescent-header__middle">
-      <div class="h7-nav-container">
-        <div class="row align-items-center">
-          <div class="col-12">
-            <div class="crescent-header__inside flex-wrap">
-              <div class="crescent-header__logo">
-                <a href="#" class="crescent-logo-text">CRESCENT</a>
-              </div>
-              <div class="crescent-header__menu">
-                <div class="navbar">
-                  <div class="nav-item">
-                    <!-- Main Menu -->
-                    <ul class="nav-menu menu navigation list-none">
-                      <li class="active"><a href="#">Home</a></li>
-                      <li><a href="#about">About Us</a></li>
-                      <li><a href="#services">Services</a></li>
-                      <li><a href="#pricing">Pricing</a></li>
-                      <li><a href="#contact">Contact</a></li>
-                    </ul>
-                    <!-- End Main Menu -->
-                  </div>
-                </div>
-              </div>
-              <button type="button" class="offcanvas-toggler" data-bs-toggle="modal" data-bs-target="#offcanvas-modal">
-                <span class="line"></span><span class="line"></span><span class="line"></span>
-              </button>
-              <div class="crescent-header__button">
-                <!-- <a href="#" class="h7-btn-secondary"><span>Login</span></a>
-                <a href="#" class="h7-btn-primary">
-                  <span>Get Started Free</span>
-                </a> -->
-              </div>
-            </div>
+<!-- Services -->
+<section id="services" class="c-section grid-bg">
+  <div class="container">
+    <div class="text-center" data-aos="fade-up">
+      <div class="c-section-label">— Our Services</div>
+      <h2 class="c-section-title">Solutions Engineered to<br>Scale Your Business</h2>
+      <p class="c-section-desc centered">From ideation to deployment, we provide end-to-end digital solutions tailored to your needs.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card svc-green" data-aos="fade-up" data-aos-delay="0">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--c-green-text)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3>Web Development</h3>
+        <p style="font-size:14px;color:var(--c-muted);margin-top:8px;">High-performance, responsive websites built with modern frameworks for maximum speed and SEO dominance.</p>
+      </div>
+      <div class="svc-card svc-blue" data-aos="fade-up" data-aos-delay="100">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--c-blue-text)" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        </div>
+        <h3>Mobile Apps</h3>
+        <p style="font-size:14px;color:var(--c-muted);margin-top:8px;">Native and cross-platform mobile solutions that provide seamless user experiences across iOS and Android.</p>
+      </div>
+      <div class="svc-card svc-purple" data-aos="fade-up" data-aos-delay="200">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--c-purple-text)" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>SaaS Engineering</h3>
+        <p style="font-size:14px;color:var(--c-muted);margin-top:8px;">Scalable cloud-based software architectures designed for infinite growth and operational efficiency.</p>
+      </div>
+      <div class="svc-card svc-orange" data-aos="fade-up" data-aos-delay="0">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--c-orange-text)" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-11.7c.9 0 1.8.2 2.7.5"/><path d="M18 12.5V10l4 2.5-4 2.5v-2.5"/></svg>
+        </div>
+        <h3>Digital Growth</h3>
+        <p style="font-size:14px;color:var(--c-muted);margin-top:8px;">Data-driven marketing strategies that turn users into evangelists and clicks into sustainable revenue.</p>
+      </div>
+      <div class="svc-card svc-pink" data-aos="fade-up" data-aos-delay="100">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--c-pink-text)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8V12L14 14"/></svg>
+        </div>
+        <h3>AI Integration</h3>
+        <p style="font-size:14px;color:var(--c-muted);margin-top:8px;">Embedding intelligent, data-driven logic into your products to automate decisions and optimize journeys.</p>
+      </div>
+      <div class="svc-card svc-teal" data-aos="fade-up" data-aos-delay="200">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--c-teal-text)" stroke-width="2"><path d="M17.5 19c2.5 0 4.5-2 4.5-4.5 0-2.3-1.7-4.2-4-4.5V8.5C18 5.5 15.5 3 12.5 3S7 5.5 7 8.5V10c-2.3.3-4 2.2-4 4.5C3 17 5 19 7.5 19h10z"/></svg>
+        </div>
+        <h3>Cloud & DevOps</h3>
+        <p style="font-size:14px;color:var(--c-muted);margin-top:8px;">Robust serverless architectures and automated deployment pipelines for mission-critical applications.</p>
+      </div>
+    </div>
+    <div class="svc-cta-row" data-aos="fade-up">
+      <a href="#contact" class="c-btn-primary">Explore All Services →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Methodology / Process -->
+<section id="process" class="c-section dark-section">
+  <div class="container">
+    <div class="text-center" data-aos="fade-up">
+      <div class="c-section-label" style="color:rgba(255,255,255,0.5);">— Process</div>
+      <h2 class="c-section-title" style="color:#fff;">The Crescent<br>Methodology</h2>
+      <p class="c-section-desc centered" style="color:rgba(255,255,255,0.55);">From initial architecture to global launch, our phased framework ensures your product is engineered for scale.</p>
+    </div>
+    <div style="margin-top:48px;">
+      <div class="process-tabs" id="processTabs">
+        <button class="process-tab active" data-tab="tab1">01: Blueprint</button>
+        <button class="process-tab" data-tab="tab2">02: Design</button>
+        <button class="process-tab" data-tab="tab3">03: Engineer</button>
+        <button class="process-tab" data-tab="tab4">04: QA Verify</button>
+        <button class="process-tab" data-tab="tab5">05: Launch</button>
+      </div>
+      <div id="tab1" class="tab-panel" style="position:relative;">
+        <div class="process-steps" data-aos="fade-up">
+          <div class="process-step">
+            <div class="step-num">1</div>
+            <h4>Discovery & Scope</h4>
+            <p>We analyze your business goals and technical requirements to define the precise project scope.</p>
           </div>
+          <div class="process-step">
+            <div class="step-num">2</div>
+            <h4>Tech-Stack Selection</h4>
+            <p>Selection of the optimal technologies tailored for your specific software architecture.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-num">3</div>
+            <h4>Architecture Blueprint</h4>
+            <p>Creation of a definitive timeline, scalable architecture diagram, and data flow blueprint.</p>
+          </div>
+        </div>
+      </div>
+      <div id="tab2" class="tab-panel" style="display:none;position:relative;">
+        <div class="process-steps">
+          <div class="process-step"><div class="step-num">1</div><h4>UX Wireframing</h4><p>Wireframing core interactions and establishing a deliberate psychological user workflow.</p></div>
+          <div class="process-step"><div class="step-num">2</div><h4>Brand UI Design</h4><p>Crafting high-fidelity, pixel-perfect UI designs incorporating your unique brand identity.</p></div>
+          <div class="process-step"><div class="step-num">3</div><h4>Interactive Prototyping</h4><p>Delivering an interactive prototype to visualize the web experience before any code is written.</p></div>
+        </div>
+      </div>
+      <div id="tab3" class="tab-panel" style="display:none;position:relative;">
+        <div class="process-steps">
+          <div class="process-step"><div class="step-num">1</div><h4>Front-End Code</h4><p>Transforming designs into hyper-responsive, fluid, and high-performance front-end code.</p></div>
+          <div class="process-step"><div class="step-num">2</div><h4>Back-End Systems</h4><p>Developing secure back-end systems, custom APIs, and elastic database architectures.</p></div>
+          <div class="process-step"><div class="step-num">3</div><h4>CMS Integrations</h4><p>Integrating powerful Headless CMS platforms and essential third-party software tools.</p></div>
+        </div>
+      </div>
+      <div id="tab4" class="tab-panel" style="display:none;position:relative;">
+        <div class="process-steps">
+          <div class="process-step"><div class="step-num">1</div><h4>Device Compatibility</h4><p>Rigorous cross-browser and cross-device testing ensuring universal visual fidelity.</p></div>
+          <div class="process-step"><div class="step-num">2</div><h4>Performance Optimization</h4><p>Load testing and structural performance optimization targeting zero-latency interactions.</p></div>
+          <div class="process-step"><div class="step-num">3</div><h4>Security Auditing</h4><p>Comprehensive database, API, and backend security audits to protect your core user data.</p></div>
+        </div>
+      </div>
+      <div id="tab5" class="tab-panel" style="display:none;position:relative;">
+        <div class="process-steps">
+          <div class="process-step"><div class="step-num">1</div><h4>Cloud Deployment</h4><p>Seamless deployment to globally scalable, cloud-based hosting environments like AWS or Vercel.</p></div>
+          <div class="process-step"><div class="step-num">2</div><h4>Global CDN & SSL</h4><p>Configuration of global Content Delivery Networks and SSL certificates for maximum speed.</p></div>
+          <div class="process-step"><div class="step-num">3</div><h4>Active Maintenance</h4><p>Ongoing technical maintenance, active server monitoring, and iterative feature scaling.</p></div>
         </div>
       </div>
     </div>
-  </header>
-  <!-- End Header -->
+  </div>
+</section>
 
-  <div class="">
-    <!-- Hero Banner -->
-    <section class="bg-dark position-relative overflow-hidden pt-180 pb-180">
-      <div class="mesh-gradient-bg"></div>
-      <div class="container h7-hero-wrapper">
-        <div class="row align-items-center">
-          <div class="col-12 col-xl-7 position-relative" data-aos="fade-right">
-            <div class="hero-badge-glass">
-              <span class="text-h7-primary">●</span> Web Excellence
-            </div>
-            <h2 class="h7-hero-main-heading text-white mb-30" style="font-size: 56px; line-height: 1.1;">
-              Next-Gen <br /> <span class="gradient-text-ai">Digital Presence</span>
-            </h2>
-            <p class="h7-paragraph text-light-gray mb-40" style="font-size: 20px; max-width: 600px; opacity: 0.9;">
-              We architect high-performance SaaS platforms and premium web ecosystems.
-              Empower your business with scalable, secure, and hyper-efficient digital leverage.
-            </p>
-            <div class="hero-stats-row d-flex gap-40 mt-50">
-              <div class="stat-item">
-                <div class="text-h7-primary h4 font-weight-bold mb-0">99.9%</div>
-                <div class="text-white opacity-50 small text-uppercase letter-spacing-1">SaaS Reliability</div>
-              </div>
-              <div class="stat-item">
-                <div class="text-h7-primary h4 font-weight-bold mb-0">150ms</div>
-                <div class="text-white opacity-50 small text-uppercase letter-spacing-1">Page Velocity</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-xl-5 d-flex justify-content-center h7-hero-img mt-sm-60" data-aos="zoom-in">
-            <div class="scalability-engine-card" style="padding: 50px;">
-              <div class="engine-header mb-40">
-                <div class="logic-chip mb-20"
-                  style="background: rgba(121, 74, 255, 0.1); border: 1px solid var(--crescent-neon); padding: 5px 12px; border-radius: 20px; font-size: 10px; color: var(--crescent-neon); font-weight: 700; text-transform: uppercase; display: inline-block;">
-                  Strategic Pivot</div>
-                <h3 class="engine-title" style="font-size: 32px; line-height: 1.2; margin-bottom: 10px;">The Leverage
-                  Framework</h3>
-              </div>
-
-              <div class="leverage-messaging">
-                <h4 class="text-white mb-20" style="font-size: 20px; font-weight: 600; opacity: 0.9;">
-                  Why a "Standard" Web is Your Biggest Hidden Cost
-                </h4>
-                <p class="text-light-gray" style="font-size: 16px; line-height: 1.6; opacity: 0.7;">
-                  Transforming digital presence from a vertical cost into a horizontal revenue driver.
-                </p>
-              </div>
-
-              <a href="#contact" class="engine-cta mt-40">
-                <span>Request Strategic Audit</span>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
-
-              <p class="text-center mt-30 opacity-30"
-                style="font-size: 10px; text-transform: uppercase; letter-spacing: 2px;">
-                CRESCENT Authority v1.0
-              </p>
-            </div>
-          </div>
-        </div>
+<!-- Pricing -->
+<section id="pricing" class="c-section grid-bg">
+  <div class="container">
+    <div class="text-center" data-aos="fade-up">
+      <div class="c-section-label">— Our Pricing</div>
+      <h2 class="c-section-title">Select Plan According to<br>Your Needs</h2>
+    </div>
+    <div class="price-grid">
+      <div class="price-card" data-aos="fade-up" data-aos-delay="0">
+        <h3>Web Identity</h3>
+        <p class="price-desc">Perfect for startups and brands looking to establish a dominant online presence.</p>
+        <div class="price-amount">From $...</div>
+        <div class="price-term">One-time investment</div>
+        <ul class="price-features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Custom UI/UX Design</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Responsive Web Architecture</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>SEO & Performance Engine</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>CMS Integration</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>30 Days Post-Launch Support</li>
+        </ul>
+        <a href="#contact" class="price-btn">Discuss Project</a>
       </div>
-    </section>
-    <!-- About Us Section -->
-    <section id="about" class="bg-dark pt-180 pb-180">
-      <div class="container">
-        <!-- Centered Header -->
-        <div class="row justify-content-center mb-80" data-aos="fade-up">
-          <div class="col-lg-8 text-center">
-            <span class="text-h7-primary fw-bold text-uppercase mb-3 d-block"
-              style="letter-spacing: 3px; font-size: 14px;">About Us</span>
-            <h2 class="text-white mt-2 mb-4" style="font-size: 42px; line-height: 1.1; font-weight: 800;">
-              The CRESCENT Identity
-            </h2>
-            <p class="text-light-gray mx-auto"
-              style="font-size: 20px; line-height: 1.6; opacity: 0.8; max-width: 800px;">
-              CRESCENT is a premier software agency specializing in high-performance digital ecosystems. We don't just
-              build websites; we engineer revenue-generating platforms that eliminate friction and maximize market
-              authority.
-            </p>
-          </div>
-        </div>
-
-        <!-- High-Impact Value Grid -->
-        <div class="row g-4 justify-content-center">
-          <!-- Value 1 -->
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="crescent-glass-card text-center h-100" style="padding: 40px 25px;">
-              <div class="icon-glow mb-25 mx-auto">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 2L2 7L12 12L22 7L12 2Z"></path>
-                  <path d="M2 17L12 22L22 17"></path>
-                  <path d="M2 12L12 17L22 12"></path>
-                </svg>
-              </div>
-              <h4 class="text-white mb-15" style="font-size: 20px; font-weight: 700;">Cloud Architecture</h4>
-              <p class="text-light-gray mb-0" style="font-size: 15px; opacity: 0.7;">Serverless infrastructure designed
-                for infinite global scale and zero-latency performance.</p>
-            </div>
-          </div>
-
-          <!-- Value 2 -->
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="crescent-glass-card text-center h-100" style="padding: 40px 25px;">
-              <div class="icon-glow mb-25 mx-auto">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
-              </div>
-              <h4 class="text-white mb-15" style="font-size: 20px; font-weight: 700;">Human-AI Fusion</h4>
-              <p class="text-light-gray mb-0" style="font-size: 15px; opacity: 0.7;">Strategically embedding AI logic
-                into core UX to automate decisions and optimize user journeys.</p>
-            </div>
-          </div>
-
-          <!-- Value 3 -->
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="crescent-glass-card text-center h-100" style="padding: 40px 25px;">
-              <div class="icon-glow mb-25 mx-auto">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                </svg>
-              </div>
-              <h4 class="text-white mb-15" style="font-size: 20px; font-weight: 700;">Precision Growth</h4>
-              <p class="text-light-gray mb-0" style="font-size: 15px; opacity: 0.7;">Technical execution that serves
-                strategic business goals through systemic revenue loops.</p>
-            </div>
-          </div>
-
-          <!-- Value 4 -->
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="crescent-glass-card text-center h-100" style="padding: 40px 25px;">
-              <div class="icon-glow mb-25 mx-auto">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                </svg>
-              </div>
-              <h4 class="text-white mb-15" style="font-size: 20px; font-weight: 700;">Security Audits</h4>
-              <p class="text-light-gray mb-0" style="font-size: 15px; opacity: 0.7;">Enterprise-grade security protocols
-                ensuring absolute integrity for your critical user data.</p>
-            </div>
-          </div>
-        </div>
+      <div class="price-card featured" data-aos="fade-up" data-aos-delay="100">
+        <div class="price-badge">Most Popular</div>
+        <h3>SaaS MVP</h3>
+        <p class="price-desc">Ideal for entrepreneurs looking to build and scale custom web applications.</p>
+        <div class="price-amount">From $...</div>
+        <div class="price-term">One-time investment</div>
+        <ul class="price-features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Full-Stack Engineering</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>User Auth & Data Management</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>API & Cloud Architecture</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Scalable Infrastructure</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Beta Launch Strategy</li>
+        </ul>
+        <a href="#contact" class="price-btn">Build My MVP</a>
       </div>
-    </section>
-
-    <!-- The Crescent Methodology -->
-    <section class="bg-dark pt-180 pb-180" style="padding-top: 100px !important; padding-bottom: 100px !important;">
-      <div class="container">
-        <div class="row align-items-center">
-          <!-- Text Content -->
-          <div data-aos="fade-up" class="col-lg-12">
-            <div>
-              <h1 class="h7-section-heading text-h7-primary mb-20 text-center">
-                The CRESCENT Methodology
-              </h1>
-              <h2 class="h7-section-heading-main text-white text-center">
-                Your Digital Lifecycle
-              </h2>
-              <p class="text-light-gray h7-card-paragraph max-w-700 mt-20 mx-auto text-center" style="opacity: 0.8;">
-                From initial architecture to global launch, our 5-phase framework ensures your website or
-                web-application is engineered for dominance, scaling seamlessly alongside your business operations.
-              </p>
-              <div class="pt-40">
-                <style>
-                  #nav-tab .h7-btn-secondary.active::before,
-                  #nav-tab .h7-btn-secondary.active::after,
-                  #nav-tab .h7-btn-secondary:hover::before,
-                  #nav-tab .h7-btn-secondary:hover::after {
-                    background-color: #4A2BFF !important;
-                  }
-
-                  #nav-tab .h7-btn-secondary {
-                    border-color: #4A2BFF !important;
-                  }
-
-                  #nav-tab .h7-btn-secondary.active>span {
-                    color: #ffffff !important;
-                  }
-                </style>
-                <nav class="nav nav-tabs h7-nav-tabs gap-16 border-0 justify-content-center" id="nav-tab"
-                  role="tablist">
-                  <a class="h7-btn-secondary active" id="nav-phase1-tab" data-bs-toggle="tab" href="#nav-phase1"
-                    role="tab" aria-selected="true" style="padding: 10px 20px;">
-                    <span>01: Blueprint</span>
-                  </a>
-                  <a class="h7-btn-secondary" id="nav-phase2-tab" data-bs-toggle="tab" href="#nav-phase2" role="tab"
-                    aria-selected="false" style="padding: 10px 20px;">
-                    <span>02: Design</span>
-                  </a>
-                  <a class="h7-btn-secondary" id="nav-phase3-tab" data-bs-toggle="tab" href="#nav-phase3" role="tab"
-                    aria-selected="false" style="padding: 10px 20px;">
-                    <span>03: Engineer</span>
-                  </a>
-                  <a class="h7-btn-secondary" id="nav-phase4-tab" data-bs-toggle="tab" href="#nav-phase4" role="tab"
-                    aria-selected="false" style="padding: 10px 20px;">
-                    <span>04: QA Verify</span>
-                  </a>
-                  <a class="h7-btn-secondary" id="nav-phase5-tab" data-bs-toggle="tab" href="#nav-phase5" role="tab"
-                    aria-selected="false" style="padding: 10px 20px;">
-                    <span>05: Launch</span>
-                  </a>
-                </nav>
-                <div class="tab-content mt-40" id="nav-tabContent">
-
-                  <!-- Phase 1 -->
-                  <div class="tab-pane fade show active" id="nav-phase1" role="tabpanel">
-                    <div class="row g-4 position-relative justify-content-center pt-3">
-                      <!-- Connecting Line for Desktop -->
-                      <div class="d-none d-lg-block"
-                        style="position: absolute; top: 46px; left: 16%; width: 68%; height: 2px; background: linear-gradient(90deg, rgba(74,43,255,0) 0%, rgba(74,43,255,0.6) 50%, rgba(74,43,255,0) 100%); z-index: 0;">
-                      </div>
-
-                      <div class="col-lg-4 col-md-6 text-center position-relative z-1" data-aos="fade-up">
-                        <div class="d-flex align-items-center justify-content-center mx-auto mb-4"
-                          style="width: 60px; height: 60px; border-radius: 50%; background: #0A0A10; border: 2px solid #4A2BFF; box-shadow: 0 0 15px rgba(74, 43, 255, 0.4);">
-                          <span class="text-white" style="font-size: 20px; font-weight: 700;">1</span>
-                        </div>
-                        <h3 class="text-white mb-15" style="font-size: 20px; font-weight: 600;">Discovery & Scope</h3>
-                        <p class="text-light-gray m-0 px-xl-3" style="font-size: 15px; line-height: 1.6;">
-                          We analyze your business goals and technical requirements to define the precise project scope.
-                        </p>
-                      </div>
-                      <div class="col-lg-4 col-md-6 text-center position-relative z-1" data-aos="fade-up"
-                        data-aos-delay="100">
-                        <div class="d-flex align-items-center justify-content-center mx-auto mb-4"
-                          style="width: 60px; height: 60px; border-radius: 50%; background: #0A0A10; border: 2px solid #4A2BFF; box-shadow: 0 0 15px rgba(74, 43, 255, 0.4);">
-                          <span class="text-white" style="font-size: 20px; font-weight: 700;">2</span>
-                        </div>
-                        <h3 class="text-white mb-15" style="font-size: 20px; font-weight: 600;">Tech-Stack Selection
-                        </h3>
-                        <p class="text-light-gray m-0 px-xl-3" style="font-size: 15px; line-height: 1.6;">
-                          Selection of the optimal tech-stack tailored for your specific web software architecture.
-                        </p>
-                      </div>
-                      <div class="col-lg-4 col-md-6 text-center position-relative z-1" data-aos="fade-up"
-                        data-aos-delay="200">
-                        <div class="d-flex align-items-center justify-content-center mx-auto mb-4"
-                          style="width: 60px; height: 60px; border-radius: 50%; background: #0A0A10; border: 2px solid #4A2BFF; box-shadow: 0 0 15px rgba(74, 43, 255, 0.4);">
-                          <span class="text-white" style="font-size: 20px; font-weight: 700;">3</span>
-                        </div>
-                        <h3 class="text-white mb-15" style="font-size: 20px; font-weight: 600;">Architecture Blueprint
-                        </h3>
-                        <p class="text-light-gray m-0 px-xl-3" style="font-size: 15px; line-height: 1.6;">
-                          Creation of a definitive timeline, scalable architecture diagram, and data flow blueprint.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Phase 2 -->
-                  <div class="tab-pane fade" id="nav-phase2" role="tabpanel">
-                    <div class="row g-4 position-relative justify-content-center pt-3">
-                      <div class="d-none d-lg-block"
-                        style="position: absolute; top: 46px; left: 16%; width: 68%; height: 2px; background: linear-gradient(90deg, rgba(74,43,255,0) 0%, rgba(74,43,255,0.6) 50%, rgba(74,43,255,0) 100%); z-index: 0;">
-                      </div>
-
-                      <div class="col-lg-4 col-md-6 text-center position-relative z-1">
-                        <div class="d-flex align-items-center justify-content-center mx-auto mb-4"
-                          style="width: 60px; height: 60px; border-radius: 50%; background: #0A0A10; border: 2px solid #4A2BFF; box-shadow: 0 0 15px rgba(74, 43, 255, 0.4);">
-                          <span class="text-white" style="font-size: 20px; font-weight: 700;">1</span>
-                        </div>
-                        <h3 class="text-white mb-15" style="font-size: 20px; font-weight: 600;">UX Wireframing</h3>
-                        <p class="text-light-gray m-0 px-xl-3" style="font-size: 15px; line-height: 1.6;">
-                          Wireframing core interactions and establishing a deliberate psychological user workflow.
-                        </p>
-                      </div>
-                      <div class="col-lg-4 col-md-6 text-center position-relative z-1">
-                        <div class="d-flex align-items-center justify-content-center mx-auto mb-4"
-                          style="width: 60px; height: 60px; border-radius: 50%; background: #0A0A10; border: 2px solid #4A2BFF; box-shadow: 0 0 15px rgba(74, 43, 255, 0.4);">
-                          <span class="text-white" style="font-size: 20px; font-weight: 700;">2</span>
-                        </div>
-                        <h3 class="text-white mb-15" style="font-size: 20px; font-weight: 600;">Brand UI Design</h3>
-                        <p class="text-light-gray m-0 px-xl-3" style="font-size: 15px; line-height: 1.6;">
-                          Crafting high-fidelity, pixel-perfect UI designs incorporating your unique brand identity.
-                        </p>
-                      </div>
-                      <div class="col-lg-4 col-md-6 text-center position-relative z-1">
-                        <div class="d-flex align-items-center justify-content-center mx-auto mb-4"
-                          style="width: 60px; height: 60px; border-radius: 50%; background: #0A0A10; border: 2px solid #4A2BFF; box-shadow: 0 0 15px rgba(74, 43, 255, 0.4);">
-                          <span class="text-white" style="font-size: 20px; font-weight: 700;">3</span>
-                        </div>
-                        <h3 class="text-white mb-15" style="font-size: 20px; font-weight: 600;">Interactive Prototyping
-                        </h3>
-                        <p class="text-light-gray m-0 px-xl-3" style="font-size: 15px; line-height: 1.6;">
-                          Delivering an interactive prototype to visualize the web experience before any code is
-                          written.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Phase 3 -->
-                  <div class="tab-pane fade" id="nav-phase3" role="tabpanel">
-                    <div class="row g-4 position-relative justify-content-center pt-3">
-                      <div class="d-none d-lg-block"
-                        style="position: absolute; top: 46px; left: 16%; width: 68%; height: 2px; background: linear-gradient(90deg, rgba(74,43,255,0) 0%, rgba(74,43,255,0.6) 50%, rgba(74,43,255,0) 100%); z-index: 0;">
-                      </div>
-
-                      <div class="col-lg-4 col-md-6 text-center position-relative z-1">
-                        <div class="d-flex align-items-center justify-content-center mx-auto mb-4"
-                          style="width: 60px; height: 60px; border-radius: 50%; background: #0A0A10; border: 2px solid #4A2BFF; box-shadow: 0 0 15px rgba(74, 43, 255, 0.4);">
-                          <span class="text-white" style="font-size: 20px; font-weight: 700;">1</span>
-                        </div>
-                        <h3 class="text-white mb-15" style="font-size: 20px; font-weight: 600;">Front-End Code</h3>
-                        <p class="text-light-gray m-0 px-xl-3" style="font-size: 15px; line-height: 1.6;">
-                          Transforming designs into hyper-responsive, fluid, and high-performance front-end code.
-                        </p>
-                      </div>
-                      <div class="col-lg-4 col-md-6 text-center position-relative z-1">
-                        <div class="d-flex align-items-center justify-content-center mx-auto mb-4"
-                          style="width: 60px; height: 60px; border-radius: 50%; background: #0A0A10; border: 2px solid #4A2BFF; box-shadow: 0 0 15px rgba(74, 43, 255, 0.4);">
-                          <span class="text-white" style="font-size: 20px; font-weight: 700;">2</span>
-                        </div>
-                        <h3 class="text-white mb-15" style="font-size: 20px; font-weight: 600;">Back-End Systems</h3>
-                        <p class="text-light-gray m-0 px-xl-3" style="font-size: 15px; line-height: 1.6;">
-                          Developing secure back-end systems, custom APIs, and elastic database architectures.
-                        </p>
-                      </div>
-                      <div class="col-lg-4 col-md-6 text-center position-relative z-1">
-                        <div class="d-flex align-items-center justify-content-center mx-auto mb-4"
-                          style="width: 60px; height: 60px; border-radius: 50%; background: #0A0A10; border: 2px solid #4A2BFF; box-shadow: 0 0 15px rgba(74, 43, 255, 0.4);">
-                          <span class="text-white" style="font-size: 20px; font-weight: 700;">3</span>
-                        </div>
-                        <h3 class="text-white mb-15" style="font-size: 20px; font-weight: 600;">CMS Integrations</h3>
-                        <p class="text-light-gray m-0 px-xl-3" style="font-size: 15px; line-height: 1.6;">
-                          Integrating powerful Headless CMS platforms and essential third-party software tools.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Phase 4 -->
-                  <div class="tab-pane fade" id="nav-phase4" role="tabpanel">
-                    <div class="row g-4 position-relative justify-content-center pt-3">
-                      <div class="d-none d-lg-block"
-                        style="position: absolute; top: 46px; left: 16%; width: 68%; height: 2px; background: linear-gradient(90deg, rgba(74,43,255,0) 0%, rgba(74,43,255,0.6) 50%, rgba(74,43,255,0) 100%); z-index: 0;">
-                      </div>
-
-                      <div class="col-lg-4 col-md-6 text-center position-relative z-1">
-                        <div class="d-flex align-items-center justify-content-center mx-auto mb-4"
-                          style="width: 60px; height: 60px; border-radius: 50%; background: #0A0A10; border: 2px solid #4A2BFF; box-shadow: 0 0 15px rgba(74, 43, 255, 0.4);">
-                          <span class="text-white" style="font-size: 20px; font-weight: 700;">1</span>
-                        </div>
-                        <h3 class="text-white mb-15" style="font-size: 20px; font-weight: 600;">Device Compatibility
-                        </h3>
-                        <p class="text-light-gray m-0 px-xl-3" style="font-size: 15px; line-height: 1.6;">
-                          Rigorous cross-browser and cross-device testing ensuring universal visual fidelity.
-                        </p>
-                      </div>
-                      <div class="col-lg-4 col-md-6 text-center position-relative z-1">
-                        <div class="d-flex align-items-center justify-content-center mx-auto mb-4"
-                          style="width: 60px; height: 60px; border-radius: 50%; background: #0A0A10; border: 2px solid #4A2BFF; box-shadow: 0 0 15px rgba(74, 43, 255, 0.4);">
-                          <span class="text-white" style="font-size: 20px; font-weight: 700;">2</span>
-                        </div>
-                        <h3 class="text-white mb-15" style="font-size: 20px; font-weight: 600;">Performance Optimization
-                        </h3>
-                        <p class="text-light-gray m-0 px-xl-3" style="font-size: 15px; line-height: 1.6;">
-                          Load testing and structural performance optimization targeting zero-latency interactions.
-                        </p>
-                      </div>
-                      <div class="col-lg-4 col-md-6 text-center position-relative z-1">
-                        <div class="d-flex align-items-center justify-content-center mx-auto mb-4"
-                          style="width: 60px; height: 60px; border-radius: 50%; background: #0A0A10; border: 2px solid #4A2BFF; box-shadow: 0 0 15px rgba(74, 43, 255, 0.4);">
-                          <span class="text-white" style="font-size: 20px; font-weight: 700;">3</span>
-                        </div>
-                        <h3 class="text-white mb-15" style="font-size: 20px; font-weight: 600;">Security Auditing</h3>
-                        <p class="text-light-gray m-0 px-xl-3" style="font-size: 15px; line-height: 1.6;">
-                          Comprehensive database, API, and backend security audits to protect your core user data.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Phase 5 -->
-                  <div class="tab-pane fade" id="nav-phase5" role="tabpanel">
-                    <div class="row g-4 position-relative justify-content-center pt-3">
-                      <div class="d-none d-lg-block"
-                        style="position: absolute; top: 46px; left: 16%; width: 68%; height: 2px; background: linear-gradient(90deg, rgba(74,43,255,0) 0%, rgba(74,43,255,0.6) 50%, rgba(74,43,255,0) 100%); z-index: 0;">
-                      </div>
-
-                      <div class="col-lg-4 col-md-6 text-center position-relative z-1">
-                        <div class="d-flex align-items-center justify-content-center mx-auto mb-4"
-                          style="width: 60px; height: 60px; border-radius: 50%; background: #0A0A10; border: 2px solid #4A2BFF; box-shadow: 0 0 15px rgba(74, 43, 255, 0.4);">
-                          <span class="text-white" style="font-size: 20px; font-weight: 700;">1</span>
-                        </div>
-                        <h3 class="text-white mb-15" style="font-size: 20px; font-weight: 600;">Cloud Deployment</h3>
-                        <p class="text-light-gray m-0 px-xl-3" style="font-size: 15px; line-height: 1.6;">
-                          Seamless deployment to globally scalable, cloud-based hosting environments like AWS or Vercel.
-                        </p>
-                      </div>
-                      <div class="col-lg-4 col-md-6 text-center position-relative z-1">
-                        <div class="d-flex align-items-center justify-content-center mx-auto mb-4"
-                          style="width: 60px; height: 60px; border-radius: 50%; background: #0A0A10; border: 2px solid #4A2BFF; box-shadow: 0 0 15px rgba(74, 43, 255, 0.4);">
-                          <span class="text-white" style="font-size: 20px; font-weight: 700;">2</span>
-                        </div>
-                        <h3 class="text-white mb-15" style="font-size: 20px; font-weight: 600;">Global CDN & SSL</h3>
-                        <p class="text-light-gray m-0 px-xl-3" style="font-size: 15px; line-height: 1.6;">
-                          Configuration of global Content Delivery Networks and SSL certificates for maximum speed.
-                        </p>
-                      </div>
-                      <div class="col-lg-4 col-md-6 text-center position-relative z-1">
-                        <div class="d-flex align-items-center justify-content-center mx-auto mb-4"
-                          style="width: 60px; height: 60px; border-radius: 50%; background: #0A0A10; border: 2px solid #4A2BFF; box-shadow: 0 0 15px rgba(74, 43, 255, 0.4);">
-                          <span class="text-white" style="font-size: 20px; font-weight: 700;">3</span>
-                        </div>
-                        <h3 class="text-white mb-15" style="font-size: 20px; font-weight: 600;">Active Maintenance</h3>
-                        <p class="text-light-gray m-0 px-xl-3" style="font-size: 15px; line-height: 1.6;">
-                          Ongoing technical maintenance, active server monitoring, and iterative feature scaling.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- why choose us end  -->
-    <section class="funfact-v2 h7-funfact mt-sm-50 mt-180" data-aos="fade-up">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="funfact-v2__inner">
-              <div class="funfact-v2__single">
-                <h4 class="funfact-v2__number">
-                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="60" height="60" rx="30" fill="var(--crescent-neon)" />
-                    <path d="M20 20H40V40H20V20Z" fill="white" />
-                  </svg>
-                </h4>
-                <div class="funfact-v2__content">
-                  <span> <span class="counter-active">25</span>+</span>
-                  <p class="funfact-v2__label">Projects Delivered</p>
-                </div>
-              </div>
-              <div class="funfact-v2__single">
-                <h4 class="funfact-v2__number">
-                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="60" height="60" rx="30" fill="var(--crescent-accent-blue)" />
-                    <path d="M30 20L32 26H38L33 30L35 36L30 32L25 36L27 30L22 26H28L30 20Z" fill="white" />
-                  </svg>
-                </h4>
-                <div class="funfact-v2__content">
-                  <span> <span class="counter-active">5</span>+</span>
-                  <p class="funfact-v2__label">Years Experience</p>
-                </div>
-              </div>
-              <div class="funfact-v2__single">
-                <h4 class="funfact-v2__number">
-                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="60" height="60" rx="30" fill="var(--crescent-accent-blue)" />
-                    <circle cx="30" cy="30" r="10" stroke="white" stroke-width="2" />
-                  </svg>
-                </h4>
-                <div class="funfact-v2__content">
-                  <span> <span class="counter-active">5</span>+</span>
-                  <p class="funfact-v2__label">Global Partners</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="services" class="h7-app-interface position-relative overflow-hidden bg-dark pt-180 pb-0">
-      <div class="mesh-gradient-bg"></div>
-      <div class="container h7-service-wrapper">
-        <h1 class="h7-section-heading text-white mb-20">Our Services</h1>
-        <h2 class="h7-section-heading-main text-white">
-          Solutions Engineered to <br />
-          Scale Your Business
-        </h2>
-        <div class="row -mt-8 g-64">
-          <!-- Web Development -->
-          <div data-aos="fade-up" class="col-md-6 col-lg-4">
-            <div class="d-flex flex-column align-items-center">
-              <div class="service-icon-wrapper mb-30" style="color: var(--crescent-neon);">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                  <line x1="8" y1="21" x2="16" y2="21"></line>
-                  <line x1="12" y1="17" x2="12" y2="21"></line>
-                </svg>
-              </div>
-              <h3 class="h7-card-heading text-white text-center">Web Development</h3>
-              <p class="text-h7-paragraph h7-card-paragraph text-center">
-                High-performance, responsive websites built with modern frameworks for maximum speed and SEO dominance.
-              </p>
-            </div>
-          </div>
-          <!-- Mobile Apps -->
-          <div data-aos="fade-up" data-aos-delay="100" class="col-md-6 col-lg-4">
-            <div class="d-flex flex-column align-items-center">
-              <div class="service-icon-wrapper mb-30" style="color: var(--crescent-neon);">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                  <line x1="12" y1="18" x2="12.01" y2="18"></line>
-                </svg>
-              </div>
-              <h3 class="h7-card-heading text-white text-center">Mobile Apps</h3>
-              <p class="text-h7-paragraph h7-card-paragraph text-center">
-                Native and cross-platform mobile solutions that provide seamless user experiences across iOS and
-                Android.
-              </p>
-            </div>
-          </div>
-          <!-- SaaS Solutions -->
-          <div data-aos="fade-up" data-aos-delay="200" class="col-md-6 col-lg-4">
-            <div class="d-flex flex-column align-items-center">
-              <div class="service-icon-wrapper mb-30" style="color: var(--crescent-neon);">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 2L2 7L12 12L22 7L12 2Z"></path>
-                  <path d="M2 17L12 22L22 17"></path>
-                  <path d="M2 12L12 17L22 12"></path>
-                </svg>
-              </div>
-              <h3 class="h7-card-heading text-white text-center">SaaS Engineering</h3>
-              <p class="text-h7-paragraph h7-card-paragraph text-center">
-                Scalable cloud-based software architectures designed for infinite growth and operational efficiency.
-              </p>
-            </div>
-          </div>
-          <!-- Digital Marketing -->
-          <div data-aos="fade-up" class="col-md-6 col-lg-4">
-            <div class="d-flex flex-column align-items-center">
-              <div class="service-icon-wrapper mb-30" style="color: var(--crescent-neon);">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-11.7c.9 0 1.8.2 2.7.5"></path>
-                  <path d="M18 12.5V10l4 2.5-4 2.5v-2.5"></path>
-                </svg>
-              </div>
-              <h3 class="h7-card-heading text-white text-center">Digital Growth</h3>
-              <p class="text-h7-paragraph h7-card-paragraph text-center">
-                Data-driven marketing strategies that turn users into evangelists and clicks into sustainable revenue.
-              </p>
-            </div>
-          </div>
-          <!-- AI Integration -->
-          <div data-aos="fade-up" data-aos-delay="100" class="col-md-6 col-lg-4">
-            <div class="d-flex flex-column align-items-center">
-              <div class="service-icon-wrapper mb-30" style="color: var(--crescent-neon);">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M12 8V12L14 14"></path>
-                </svg>
-              </div>
-              <h3 class="h7-card-heading text-white text-center">AI Integration</h3>
-              <p class="text-h7-paragraph h7-card-paragraph text-center">
-                Embedding intelligent, data-driven logic into your products to automate decisions and optimize journeys.
-              </p>
-            </div>
-          </div>
-          <!-- Cloud Infrastructure -->
-          <div data-aos="fade-up" data-aos-delay="200" class="col-md-6 col-lg-4">
-            <div class="d-flex flex-column align-items-center">
-              <div class="service-icon-wrapper mb-30" style="color: var(--crescent-neon);">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path
-                    d="M17.5 19c2.5 0 4.5-2 4.5-4.5 0-2.3-1.7-4.2-4-4.5V8.5C18 5.5 15.5 3 12.5 3S7 5.5 7 8.5V10c-2.3.3-4 2.2-4 4.5C3 17 5 19 7.5 19h10z">
-                  </path>
-                </svg>
-              </div>
-              <h3 class="h7-card-heading text-white text-center">Cloud & DevOps</h3>
-              <p class="text-h7-paragraph h7-card-paragraph text-center">
-                Robust serverless architectures and automated deployment pipelines for mission-critical applications.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="d-flex justify-content-center mt-30">
-          <a href="#" class="h7-btn-primary">
-            <span>Explore All Services</span>
-          </a>
-        </div>
-      </div>
-    </section>
-    <!-- Service section   -->
-    <!-- Pricing Area -->
-    <section id="pricing" class="pricing-section-v3 bg-dark h6-pricing-wrapper pt-0 pb-180">
-
-      <div class="container">
-        <div class="row">
-          <div class="col-12 mb-20 pricing-section-title">
-            <!-- Section Title -->
-            <div class="section-title-v3 text-center" data-aos="fade-in">
-              <h1 class="h7-section-heading text-h7-heading mb-20">
-                Our Pricing
-              </h1>
-              <h2 class="h7-section-heading-main text-h7-heading">
-                Select Plan According to <br />
-                The Your Needs
-              </h2>
-            </div>
-          </div>
-        </div>
-        <div class="row h7-pricing">
-          <div class="col-lg-4 col-12" data-aos="fade-right">
-            <!-- Web Identity -->
-            <div class="single-price-table single-price-table__v2">
-              <h2 class="single-price-table__title">Web Identity</h2>
-              <p class="single-price-table__text">
-                Perfect for startups and brands looking to establish a dominant online presence.
-              </p>
-              <h3 class="price-amount">
-                From $...
-                <span class="duration">One-time</span>
-              </h3>
-              <!-- Price Features -->
-              <div class="single-price-table__features">
-                <ul>
-                  <li>
-                    <span class="single-price-table__features-icon"><img src="images/price-check-icon.svg" /></span>
-                    <span> Custom UI/UX Design </span>
-                  </li>
-                  <li>
-                    <span class="single-price-table__features-icon"><img src="images/price-check-icon.svg" /></span>
-                    <span> Responsive Web Architecture </span>
-                  </li>
-                  <li>
-                    <span class="single-price-table__features-icon"><img src="images/price-check-icon.svg" /></span>
-                    <span> SEO & Performance Engine </span>
-                  </li>
-                  <li>
-                    <span class="single-price-table__features-icon"><img src="images/price-check-icon.svg" /></span>
-                    <span> CMS Integration </span>
-                  </li>
-                  <li>
-                    <span class="single-price-table__features-icon"><img src="images/price-check-icon.svg" /></span>
-                    <span> 30 Days Post-Launch Support </span>
-                  </li>
-                </ul>
-                <a class="crescent-btn__v2 pricing-button w-100 h6-btn-bg primary-bg-hover-1" href="#contact">
-                  <span> Discuss Project </span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-12" data-aos="fade-up" data-aos-delay="200">
-            <!-- SaaS MVP -->
-            <div class="single-price-table single-price-table__v2 active">
-              <div class="popular-text" style="background: var(--crescent-v5-gradient) !important;">
-                <span class="text-white">Most Popular</span>
-              </div>
-              <h2 class="single-price-table__title text-white">
-                SaaS MVP
-              </h2>
-              <p class="single-price-table__text text-h7-heading">
-                Ideal for entrepreneurs looking to build and scale custom web applications.
-              </p>
-              <h3 class="price-amount">
-                From $...
-                <span class="duration">One-time</span>
-              </h3>
-              <!-- Price Features -->
-              <div class="single-price-table__features">
-                <ul>
-                  <li>
-                    <span class="single-price-table__features-icon" style="color: #fff;">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="3">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg>
-                    </span>
-                    <span> Full-Stack Engineering </span>
-                  </li>
-                  <li>
-                    <span class="single-price-table__features-icon" style="color: #fff;">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="3">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg>
-                    </span>
-                    <span> User Auth & Data Management </span>
-                  </li>
-                  <li>
-                    <span class="single-price-table__features-icon" style="color: #fff;">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="3">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg>
-                    </span>
-                    <span> API & Cloud Architecture </span>
-                  </li>
-                  <li>
-                    <span class="single-price-table__features-icon" style="color: #fff;">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="3">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg>
-                    </span>
-                    <span> Scalable Infrastructure </span>
-                  </li>
-                  <li>
-                    <span class="single-price-table__features-icon" style="color: #fff;">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="3">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg>
-                    </span>
-                    <span> Beta Launch Strategy </span>
-                  </li>
-                </ul>
-                <a class="crescent-btn__v2 pricing-button w-100 h6-btn-bg primary-bg-hover-1" href="#contact">
-                  <span> Build My MVP </span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-12" data-aos="fade-left" data-aos-delay="400">
-            <!-- Enterprise Engine -->
-            <div class="single-price-table single-price-table__v2">
-              <h2 class="single-price-table__title">Enterprise Engine</h2>
-              <p class="single-price-table__text">
-                End-to-end digital transformation for established businesses.
-              </p>
-              <h3 class="price-amount">
-                Custom
-                <span class="duration">Retainer Available</span>
-              </h3>
-              <!-- Price Features -->
-              <div class="single-price-table__features">
-                <ul>
-                  <li>
-                    <span class="single-price-table__features-icon" style="color: var(--crescent-neon);">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="3">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg>
-                    </span>
-                    <span> Legacy System Integration </span>
-                  </li>
-                  <li>
-                    <span class="single-price-table__features-icon" style="color: var(--crescent-neon);">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="3">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg>
-                    </span>
-                    <span> AI & Dedicated Automation </span>
-                  </li>
-                  <li>
-                    <span class="single-price-table__features-icon" style="color: var(--crescent-neon);">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="3">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg>
-                    </span>
-                    <span> 24/7 Priority Engineering </span>
-                  </li>
-                  <li>
-                    <span class="single-price-table__features-icon" style="color: var(--crescent-neon);">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="3">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg>
-                    </span>
-                    <span> Global CDN & Security Audit </span>
-                  </li>
-                  <li>
-                    <span class="single-price-table__features-icon" style="color: var(--crescent-neon);">
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="3">
-                        <polyline points="20 6 9 17 4 12"></polyline>
-                      </svg>
-                    </span>
-                    <span> Dedicated Growth Partners </span>
-                  </li>
-                </ul>
-                <a class="crescent-btn__v2 pricing-button w-100 h6-btn-bg primary-bg-hover-1" href="contact.html">
-                  <span> Request Enterprise Audit </span>
-                </a>
-              </div>
-            </div>
-            <!-- End Single Pricing -->
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Pricing Area -->
-    <!-- Testimonial Slides -->
-    <!--
-    <section class="h7-app-interface position-relative overflow-hidden bg-dark pt-180 pb-180">
-      <div class="mesh-gradient-bg"></div>
-      <div class="container -mt-7">
-        <div class="row">
-          <div class="col-12 mg-btm-40">
-            <div class="section-title-v3 text-center" data-aos="fade-in">
-              <h1 class="h7-section-heading text-h7-primary mb-20 text-white">
-                SaaS Ecosystems
-              </h1>
-              <h2 class="h7-section-heading-main text-white">
-                Revenue-First Infrastructure.
-              </h2>
-            </div>
-          </div>
-        </div>
-        <div class="row container">
-          <div class="col-12" data-aos="fade-in">
-            <div class="h7-app-interface-slide align-items-center h6-testimonial-slider">
-              <div class="single-slide">
-                <img src="./images/ai-1.png" alt="" class="" />
-              </div>
-              <div class="single-slide">
-                <img src="./images/ai-2.png" alt="" class="" />
-              </div>
-              <div class="single-slide">
-                <img src="./images/ai-3.png" alt="" class="" />
-              </div>
-              <div class="single-slide">
-                <img src="./images/ai-4.png" alt="" class="" />
-              </div>
-              <div class="single-slide">
-                <img src="./images/ai-2.png" alt="" class="" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    -->
-    <!--
-    <section class="pt-180 pb-180">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 mb-30">
-            <div class="section-title-area text-center" data-aos="fade-up">
-              <h1 class="h7-section-heading text-h7-heading mb-20 text-center">
-                Testimonials
-              </h1>
-              <h2 class="h7-section-heading-main text-h7-heading text-center">
-                What They Say About CRESCENT
-              </h2>
-            </div>
-          </div>
-        </div>
-        <div class="row grid">
-           (Content hidden)
-        </div>
-      </div>
-    </section>
-    -->
-    <!--
-    <section class="h7-app-sec position-relative overflow-hidden bg-dark">
-      <div class="mesh-gradient-bg"></div>
-      <div class="container h7-app-wrapper">
-        <div class="row">
-          <div data-aos="fade-right" class="col-12 col-lg-6 col-xl-7 d-flex">
-            <div class="download-app-left">
-              <h1 class="h7-section-heading text-white mb-20 text-start">
-                Download App Now
-              </h1>
-              <h2 class="h7-section-heading-main text-white text-start">
-                Download our mobile app
-              </h2>
-              <p class="h6-paragraph text-light-gray download-app-paragraph">
-                The internet has changed our ways of accessing knowledge as well
-                <br />
-                go to a library, bookstore, magazine stand.
-              </p>
-              <div class="d-flex gap-24">
-                <a href="" class="">
-                  <img src="./images/play-store-badge.png" alt="" class="" />
-                </a>
-                <a href="" class="">
-                  <img src="./images/app-store-badge.png" alt="" class="" />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div data-aos="fade-up" class="con-12 col-lg-6 col-xl-5 d-flex justify-content-center">
-            <img src="./images/our-app-img.png" alt="" class="" />
-          </div>
-        </div>
-      </div>
-    </section>
-    -->
-    <!--
-    <section class="blog-area pt-180 pb-180">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 mb-20">
-            <div class="section-title-v3 text-center" data-aos="fade-in">
-              <div class="d-flex w-100 justify-content-between flex-column flex-sm-row align-items-center">
-                <div class="">
-                  <h1 class="h6-section-heading">News & Articles</h1>
-                  <p class="h6-paragraph">
-                    Stay updated with the latest in tech and design.
-                  </p>
-                </div>
-                <a href="blog.html" class="h7-btn-primary w-fit">
-                  <span>See More Articles</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-           (Appeared below)
-        </div>
-      </div>
-    </section>
-    -->
-
-    <!-- Footer -->
-    <footer id="contact" class="h6-footer footer-area position-relative"
-      style="background-image: url('images/footer-bg.png')">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 mg-top-30" data-aos="fade-right">
-            <div class="footer-logo-area">
-              <div class="footer-logo mg-btm-15">
-                <a href="#" class="crescent-logo-text" style="font-size: 24px;">CRESCENT</a>
-              </div>
-              <p class="text-white mg-btm-25" style="opacity: 0.7;">
-                Architecting high-performance digital ecosystems for global brands and ambitious startups.
-              </p>
-              <div class="social-icon h6-footer">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mg-top-30" data-aos="fade-right" data-aos-delay="200">
-            <div class="footer-menu">
-              <h4 class="footer-title mg-btm-25">Services</h4>
-              <ul class="footer-menu__list multiline-link">
-                <li><a href="#services">Web Development</a></li>
-                <li><a href="#services">Mobile Solutions</a></li>
-                <li><a href="#services">SaaS Engineering</a></li>
-                <li><a href="#services">AI Integration</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mg-top-30" data-aos="fade-right" data-aos-delay="200">
-            <div class="footer-menu">
-              <h4 class="footer-title mg-btm-25">Company</h4>
-              <ul class="footer-menu__list">
-                <li><a href="#about">About CRESCENT</a></li>
-                <li><a href="#">Expertise & Insights</a></li>
-                <li><a href="#pricing">Strategic Pricing</a></li>
-                <li><a href="#contact">Work With Us</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mg-top-30" data-aos="fade-right" data-aos-delay="600">
-            <div class="footer-menu">
-              <h4 class="footer-title mg-btm-25">Contact Us</h4>
-              <ul class="footer-contact-list">
-                <li class="d-flex gap-3">
-                  <span><img src="images/phone-icon.svg" /></span>
-                  <a href="tel:+1234567890">+1 (234) 567-890</a>
-                </li>
-                <li class="d-flex gap-3">
-                  <span><img src="images/email-icon.png" /></span>
-                  <a href="mailto:hello@crescent.com">hello@crescent.com</a>
-                </li>
-                <li class="d-flex gap-3">
-                  <span><img src="images/location-icon.png" /></span>
-                  <a href="#">Global Reach | Remote Dedicated Teams</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- End Footer -->
-
-    <!-- Copyright  -->
-    <div class="footer-copyright footer-copyright--v3">
-      <div class="container">
-        <div class="d-flex flex-wrap align-items-center gap-3 justify-content-between">
-          <div class="footer-copyright__text">
-            <p>2024 © All rights reserved by <a href="#">CRESCENT</a></p>
-          </div>
-          <div class="footer-copyright__menu">
-            <a href="#">Privacy Policy </a>
-            <a href="#"> Terms & Conditions</a>
-          </div>
-        </div>
+      <div class="price-card" data-aos="fade-up" data-aos-delay="200">
+        <h3>Enterprise Engine</h3>
+        <p class="price-desc">End-to-end digital transformation for established businesses.</p>
+        <div class="price-amount">Custom</div>
+        <div class="price-term">Retainer available</div>
+        <ul class="price-features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Legacy System Integration</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>AI & Dedicated Automation</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>24/7 Priority Engineering</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Global CDN & Security Audit</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Dedicated Growth Partners</li>
+        </ul>
+        <a href="#contact" class="price-btn">Request Enterprise Audit</a>
       </div>
     </div>
-    <!-- End Copyright  -->
+  </div>
+</section>
 
-    <!-- Scrool Top -->
-    <a href="#" class="scrollToTop"><i class="fa-solid fa-arrow-up"></i></a>
+<!-- CTA -->
+<section id="contact" class="dark-section">
+  <div class="container cta-section" data-aos="fade-up">
+    <h2>Get in touch.</h2>
+    <a href="mailto:hello@crescent.com" class="c-btn-primary" style="font-size:16px;padding:18px 48px;">Let's Talk →</a>
+  </div>
+</section>
 
-    <!-- Plugins JS -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/slick-bundle.min.js"></script>
-    <script src="js/aos.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/gsap.min.js"></script>
-    <script>
-      // Reveal animations or other logic if needed
-      AOS.init({
-        duration: 1000,
-        once: true
-      });
+<!-- Footer -->
+<footer class="c-footer dark-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <a href="#" class="c-nav-logo" style="display:inline-block;margin-bottom:20px;">Crescent</a>
+        <p style="font-size:14px;line-height:1.7;">Architecting high-performance digital ecosystems for global brands and ambitious startups.</p>
+        <div class="footer-social" style="margin-top:20px;">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Web Development</a></li>
+          <li><a href="#services">Mobile Apps</a></li>
+          <li><a href="#services">SaaS Engineering</a></li>
+          <li><a href="#services">Digital Growth</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Crescent</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#pricing">Strategic Pricing</a></li>
+          <li><a href="#contact">Work With Us</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+          <li><a href="mailto:hello@crescent.com">hello@crescent.com</a></li>
+          <li><a href="#">Global Reach | Remote Teams</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="c-footer-bottom">
+      <p>© 2026 CRESCENT. All rights reserved.</p>
+      <div>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
-      // Make Methodology tabs switch on hover safely
-      document.addEventListener("DOMContentLoaded", function () {
-        const tabs = document.querySelectorAll('#nav-tab .h7-btn-secondary[data-bs-toggle="tab"]');
-        let hoverTimeout;
+<!-- Scripts -->
+<script src="js/aos.min.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true, offset: 60 });
 
-        tabs.forEach(tab => {
-          tab.addEventListener('mouseenter', function () {
-            clearTimeout(hoverTimeout);
-            // Wait 150ms before switching to prevent rapid stacking bugs
-            hoverTimeout = setTimeout(() => {
-              if (!this.classList.contains('active')) {
-                // Force hide all panes immediately to prevent visual stacking 
-                document.querySelectorAll('#nav-tabContent .tab-pane').forEach(p => {
-                  p.classList.remove('active', 'show');
-                });
+  // Process Tabs
+  document.querySelectorAll('.process-tab').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.process-tab').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.style.display = 'none');
+      this.classList.add('active');
+      document.getElementById(this.dataset.tab).style.display = 'block';
+    });
+  });
 
-                // Trigger Bootstrap tab
-                const tabInstance = bootstrap.Tab.getOrCreateInstance(this);
-                tabInstance.show();
-              }
-            }, 150);
-          });
+  // Hero text rotation — cinematic slide + blur morph
+  const phrases = [
+    'Next-Gen <span class="highlight">Digital Presence</span>',
+    'Scalable <span class="highlight">SaaS Platforms</span>',
+    'Premium <span class="highlight">Web Ecosystems</span>',
+    'Next-Level <span class="highlight">Digital Growth</span>'
+  ];
+  let idx = 0;
+  const heroLine = document.getElementById('heroLine');
+  setInterval(() => {
+    // Exit: slide up + blur
+    heroLine.classList.remove('visible');
+    heroLine.classList.add('exit-up');
+    setTimeout(() => {
+      idx = (idx + 1) % phrases.length;
+      heroLine.innerHTML = phrases[idx];
+      // Position below, ready to enter
+      heroLine.classList.remove('exit-up');
+      heroLine.classList.add('enter-below');
+      // Force reflow
+      void heroLine.offsetHeight;
+      // Slide in from below
+      heroLine.classList.remove('enter-below');
+      heroLine.classList.add('visible');
+    }, 500);
+  }, 3500);
 
-          tab.addEventListener('mouseleave', function () {
-            // Cancel hover switch if mouse moves away quickly
-            clearTimeout(hoverTimeout);
-          });
-        });
-      });
-    </script>
+  // Particle constellation network — full page
+  (function() {
+    const canvas = document.getElementById('heroParticles');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let w, h, particles = [], mouse = { x: -999, y: -999 };
+    const PARTICLE_COUNT = 120;
+    const CONNECTION_DIST = 180;
+    const MOUSE_DIST = 200;
+
+    function resize() {
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    document.addEventListener('mousemove', e => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+    });
+
+    class Particle {
+      constructor() { this.reset(); }
+      reset() {
+        this.x = Math.random() * w;
+        this.y = Math.random() * h;
+        this.vx = (Math.random() - 0.5) * 0.5;
+        this.vy = (Math.random() - 0.5) * 0.5;
+        this.r = Math.random() * 3 + 1.2;
+        this.baseAlpha = Math.random() * 0.3 + 0.15;
+      }
+      update() {
+        this.x += this.vx; this.y += this.vy;
+        if (this.x < 0 || this.x > w) this.vx *= -1;
+        if (this.y < 0 || this.y > h) this.vy *= -1;
+        const dx = this.x - mouse.x, dy = this.y - mouse.y;
+        const d = Math.sqrt(dx * dx + dy * dy);
+        if (d < MOUSE_DIST && d > 0) {
+          const force = (MOUSE_DIST - d) / MOUSE_DIST * 0.02;
+          this.vx += (dx / d) * force;
+          this.vy += (dy / d) * force;
+        }
+        this.vx *= 0.999; this.vy *= 0.999;
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(5, 51, 255, ${this.baseAlpha})`;
+        ctx.fill();
+      }
+    }
+
+    for (let i = 0; i < PARTICLE_COUNT; i++) particles.push(new Particle());
+
+    function drawConnections() {
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const d = Math.sqrt(dx * dx + dy * dy);
+          if (d < CONNECTION_DIST) {
+            const alpha = (1 - d / CONNECTION_DIST) * 0.20;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(5, 51, 255, ${alpha})`;
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+        }
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, w, h);
+      particles.forEach(p => { p.update(); p.draw(); });
+      drawConnections();
+      requestAnimationFrame(animate);
+    }
+    animate();
+  })();
+
+  // Nav scroll effect
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('c-nav');
+    if (window.scrollY > 60) {
+      nav.style.padding = '10px 0';
+      nav.style.boxShadow = '0 4px 20px rgba(0,0,0,0.06)';
+    } else {
+      nav.style.padding = '16px 0';
+      nav.style.boxShadow = 'none';
+    }
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
 </body>
-
 </html>
